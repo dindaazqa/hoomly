@@ -347,7 +347,7 @@ st.markdown(
     """
     <center>
     <small>
-    Hoomly © 2026 · Universitas Brawijaya · Fakultas Ilmu Komputer
+    Hoomly © 2026
     </small>
     </center>
     """,
