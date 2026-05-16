@@ -131,6 +131,7 @@ with st.sidebar:
     luas_bangunan = st.number_input(
         "📐 Minimal Luas Bangunan (m²)",
         min_value=0,
+        max_value=int(df["luas_bangunan"].max()),
         value=0,
         step=10
     )
@@ -138,6 +139,7 @@ with st.sidebar:
     luas_tanah = st.number_input(
         "🌳 Minimal Luas Tanah (m²)",
         min_value=0,
+        max_value=int(df["luas_tanah"].max()),
         value=0,
         step=10
     )
@@ -145,6 +147,7 @@ with st.sidebar:
     kamar_tidur = st.number_input(
         "🛏️ Minimal Kamar Tidur",
         min_value=0,
+        max_value=int(df["kamar_tidur"].max()),
         value=0,
         step=1
     )
@@ -152,6 +155,7 @@ with st.sidebar:
     kamar_mandi = st.number_input(
         "🚿 Minimal Kamar Mandi",
         min_value=0,
+        max_value=int(df["kamar_mandi"].max()),
         value=0,
         step=1
     )
@@ -159,6 +163,7 @@ with st.sidebar:
     garasi = st.number_input(
         "🚗 Minimal Garasi",
         min_value=0,
+        max_value=int(df["garasi"].max()),
         value=0,
         step=1
     )
@@ -325,7 +330,7 @@ with tab1:
                 # =================================================
                 # DOWNLOAD CSV
                 # =================================================
-                csv = result.to_csv(
+                csv = top.to_csv(
                     index=False
                 ).encode("utf-8")
 
